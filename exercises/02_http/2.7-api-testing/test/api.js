@@ -75,9 +75,9 @@ describe('Going through the routes', () => {
   });
 
   /*
-   * Test the /modern route, should receive bradbury.html
+   * Test the /dystopy route, should receive bradbury.html
    */
-  describe('GET /modern path', () => {
+  describe('GET /dystopy path', () => {
     // TODO modify the it statement to use the function that has been 
     // commented out below.
     // You also need to uncomment the needed parts.
@@ -88,7 +88,7 @@ describe('Going through the routes', () => {
       // BE EXTRA CAREFUL WITH THE PARANTHESES WHEN UNCOMMENTING! SEE THE EXAMPLES ABOVE!
       //     , (done) => {
       //         chai.request(server)
-      //             .get('/modern')
+      //             .get('/dystopy')
       //             .end((err, res) => {
       //                 // TODO: test that 
       //                 // a) the response should have HTTP response status of 200, and       //                 // b) that the response is in HTML form
