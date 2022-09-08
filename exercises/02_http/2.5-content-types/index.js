@@ -6,8 +6,18 @@ http.createServer(function(request, response) {
 
   //TODO: implement sending responds to requests for XML, TXT, and */* below, handling JSON provided as an example.
   if (request.headers['accept'].includes('application/json')) {
+    response.statusCode = 200;
     readFileSendResponse('data.json', 'application/json', response);
-  } else {
+  }
+  if (request.headers['accept'].includes('text/plain')) {
+    response.statusCode = 200;
+    readFileSendResponse('data.txt', 'text/plain',response);
+  }
+  if (request.headers['accept'].includes('application/xml')) {
+    response.statusCode = 200;
+    readFileSendResponse('data.xml', 'application/xml',response);
+  }
+  else {
     response.statusCode = 406;
     response.statusMessage = 'Content type not available';
     response.end();
