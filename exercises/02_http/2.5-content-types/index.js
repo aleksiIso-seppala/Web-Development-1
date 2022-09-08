@@ -9,13 +9,17 @@ http.createServer(function(request, response) {
     response.statusCode = 200;
     readFileSendResponse('data.json', 'application/json', response);
   }
-  if (request.headers['accept'].includes('text/plain')) {
+  else if (request.headers['accept'].includes('text/plain')) {
     response.statusCode = 200;
     readFileSendResponse('data.txt', 'text/plain',response);
   }
-  if (request.headers['accept'].includes('application/xml')) {
+  else if (request.headers['accept'].includes('application/xml')) {
     response.statusCode = 200;
     readFileSendResponse('data.xml', 'application/xml',response);
+  }
+  else if (request.headers['accept'].includes('*/*')){
+    response.statusCode = 200;
+    readFileSendResponse('data.txt', '*/*',response);
   }
   else {
     response.statusCode = 406;
