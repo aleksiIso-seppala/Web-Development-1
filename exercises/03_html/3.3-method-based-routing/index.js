@@ -4,17 +4,18 @@ const path = require('path');
 
 http.createServer(function(request, response) {
 
-    if(request.method === 'GET'){
+    if(request.method == 'GET'){
         response.statusCode = 200;
         readFileSendResponse('get.html','text/html',response);
     }
-    else if(request.url === 'POST'){
+    else if(request.url =='POST'){
         response.statusCode = 200;
         readFileSendResponse('post.html','text/html',response);
     }
     else{
         response.statusCode = 405;
-        response.setHeader("Allow: GET, POST"); 
+        response.setHeader("Allow: GET, POST");
+        response.end();
     }
 }).listen(3000);
 
