@@ -8,7 +8,7 @@ http.createServer(function(request, response) {
         response.statusCode = 200;
         readFileSendResponse('get.html','text/html',response);
     }
-    else if(request.url =='POST'){
+    else if(request.method =='POST'){
         response.statusCode = 200;
         readFileSendResponse('post.html','text/html',response);
     }
