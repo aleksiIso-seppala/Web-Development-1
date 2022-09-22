@@ -2,16 +2,16 @@
 var newList = document.createElement("ul");
 newList.className = "list";
 
-var newli = document.createElement("li");
+var newLi = document.createElement("li");
 
 var newLink = document.createElement("a");
 newLink.href = "http://localhost:3000/";
 newLink.text = "Localhost";
 
-var navUl = document.querySelector("nav");
+var navUl = document.querySelector("ul.navi");
 
-navUl.appendChild(newList);
-newList.appendChild(newLi);
+navUl.appendChild(newLi);
+newLi.appendChild(newLink);
 newLi.appendChild(newLink);
 
 var firstLi = document.createElement("li");
