@@ -1,6 +1,4 @@
 
-var newList = document.createElement("ul");
-newList.className = "list";
 
 var newLi = document.createElement("li");
 
@@ -9,9 +7,9 @@ newLink.href = "http://localhost:3000/";
 newLink.text = "Localhost";
 
 var navUl = document.querySelector("ul.navi");
+navUl.classList.add("list");
 
 navUl.appendChild(newLi);
-newLi.appendChild(newLink);
 newLi.appendChild(newLink);
 
 var firstLi = document.createElement("li");
@@ -21,4 +19,6 @@ var olPointer = document.querySelector("ol");
 olPointer.insertBefore(firstLi,olPointer.firstChild);
 
 var todo = document.getElementById("todo");
-todo.classList.remove("navi");
+todo.classList.remove("navi")
+
+todo.getElementsByTagName("li").item(1).remove();
