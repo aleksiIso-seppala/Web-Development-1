@@ -16,5 +16,6 @@ submit.addEventListener('click', (event) =>{
     clone.querySelector("p.email").innerHTML = email;
     clone.querySelector("p.homepage").querySelector("a").href = homepage;
     clone.querySelector("p.homepage").querySelector("a").innerHTML = homepage;
-    contacts.append(clone);
+    form.reset();
+    
 });
