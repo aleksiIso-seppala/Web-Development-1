@@ -3,7 +3,7 @@ const increment = document.getElementById('increment');
 const reset = document.getElementById('reset');
 
 decrement.addEventListener('click', (event) =>{
-    const cValue = Number.parseInt(document.getElementById('counter'));
+    const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
     var nValue = 0;
     if(cValue == -5 || cValue == 5){
         nValue = cValue * (-1);
@@ -11,10 +11,11 @@ decrement.addEventListener('click', (event) =>{
     else{
         nValue = cValue - 1;
     }
+    document.getElementById('counter').innerHtml = nValue;
 });
 
 increment.addEventListener('click', (event) =>{
-    const cValue = Number.parseInt(document.getElementById('counter'));
+    const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
     var nValue = 0;
     if(cValue == -5 || cValue == 5){
         nValue = cValue * (-1);
@@ -22,10 +23,11 @@ increment.addEventListener('click', (event) =>{
     else{
         nValue = cValue + 1;
     }
+    document.getElementById('counter').innerHtml = nValue;
 });
 
 reset.addEventListener('click', (event) =>{
-    const cValue = Number.parseInt(document.getElementById('counter'));
-    cValue = 0;
+    const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
+    document.getElementById('counter').innerHtml = 0;
 }
 );
