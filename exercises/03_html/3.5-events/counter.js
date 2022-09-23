@@ -11,7 +11,7 @@ decrement.addEventListener('click', (event) =>{
     else{
         nValue = cValue - 1;
     }
-    document.getElementById('counter').innerHtml = nValue;
+    document.getElementById('counter').innerHTML = nValue;
 });
 
 increment.addEventListener('click', (event) =>{
@@ -23,11 +23,11 @@ increment.addEventListener('click', (event) =>{
     else{
         nValue = cValue + 1;
     }
-    document.getElementById('counter').innerHtml = nValue;
+    document.getElementById('counter').innerHTML = nValue;
 });
 
 reset.addEventListener('click', (event) =>{
     const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
-    document.getElementById('counter').innerHtml = 0;
+    document.getElementById('counter').innerHTML = 0;
 }
 );
