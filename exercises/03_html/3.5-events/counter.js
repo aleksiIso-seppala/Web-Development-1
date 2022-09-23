@@ -5,7 +5,7 @@ const reset = document.getElementById('reset');
 decrement.addEventListener('click', (event) =>{
     const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
     var nValue = 0;
-    if(cValue == -5 || cValue == 5){
+    if(cValue == -5){
         nValue = cValue * (-1);
     }
     else{
@@ -17,7 +17,7 @@ decrement.addEventListener('click', (event) =>{
 increment.addEventListener('click', (event) =>{
     const cValue = Number.parseInt(document.getElementById('counter').innerHTML);
     var nValue = 0;
-    if(cValue == -5 || cValue == 5){
+    if(cValue == 5){
         nValue = cValue * (-1);
     }
     else{
