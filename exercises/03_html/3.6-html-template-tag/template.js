@@ -1,12 +1,12 @@
-const form = document.getElementById("form");
+const form1 = document.getElementById("form");
 const contacts = document.querySelector("div");
 const contactTemplate = document.querySelector("template");
 
 const submit = document.getElementById("submit");
 
-submit.addEventListener('click', (event) =>{
+submit.addEventListener('click', function(event){
     event.preventDefault();
-    var formData = new FormData(form);
+    var formData = new FormData(form1);
     var name = formData.get("name");
     var email = formData.get("email");
     var homepage = formData.get("homepage");
@@ -16,6 +16,6 @@ submit.addEventListener('click', (event) =>{
     clone.querySelector("p.email").innerHTML = email;
     clone.querySelector("p.homepage").querySelector("a").href = homepage;
     clone.querySelector("p.homepage").querySelector("a").innerHTML = homepage;
-    form.reset();
+    form1.reset();
     
 });
