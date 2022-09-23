@@ -14,7 +14,8 @@ http.createServer(function(request, response) {
     }
     else{
         response.statusCode = 405;
-        response.setHeader("Allow: GET, POST");
+        response.setHeader({"Allow" : "GET, POST"});
+        response.end();
     }
 }).listen(3000);
 
