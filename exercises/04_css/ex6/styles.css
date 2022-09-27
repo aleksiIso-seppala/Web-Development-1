@@ -28,31 +28,87 @@ header {
   padding: 1.5rem;
   grid-area: h;
 }
-
-article {
-  background-color: lightblue;
-  border: solid;
-  margin: 0;
-  display: grid;
-  /* TODO: modify the line below to add the needed grid-template-areas for sections and articles.
-  
-  For placing areas side-by-side, the syntax is simple, for example:
-    grid-template-areas:    "a1 b1"
-                            "a2 b2";
-  */
-  /* grid-template-areas: "sec1 aside1"
-                       "sec2 aside2"
-                       "sec3 ."; */
-  @media only screen and (max-width: 600px){
+@media only screen and (max-width: 599px){
+  article {
+    background-color: lightblue;
+    border: solid;
+    margin: 0;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for sections and articles.
+    
+    For placing areas side-by-side, the syntax is simple, for example:
+      grid-template-areas:    "a1 b1"
+                              "a2 b2";
+    */
     grid-template-areas: "sec1"
-                         "sec2"
-                         "sec3"
-                         "aside1"
-                         "aside2";
+                        "sec2"
+                        "sec3"
+                        "aside1"
+                        "aside";
+    height: 100%;  
   }
-  height: 100%;
+  footer {
+    background-color: darkslategray;
+    grid-area: f;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for the navigation elements*/
+    grid-template-areas: "nav1" 
+                         "nav2";
+    padding: 1.5rem;
+  }
 }
-
+@media only screen and (max-width: 600) and (max-width: 991){
+  article {
+    background-color: lightblue;
+    border: solid;
+    margin: 0;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for sections and articles.
+    
+    For placing areas side-by-side, the syntax is simple, for example:
+      grid-template-areas:    "a1 b1"
+                              "a2 b2";
+    */
+    grid-template-areas: "sec1 aside1"
+                         "sec2 aside2"
+                         "sec3 .";
+    height: 100%; 
+  }
+  footer {
+    background-color: darkslategray;
+    grid-area: f;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for the navigation elements*/
+    grid-template-areas: "nav1" 
+                         "nav2";
+    padding: 1.5rem;
+  }
+}
+@media only screen and (min-width: 992){
+  article {
+    background-color: lightblue;
+    border: solid;
+    margin: 0;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for sections and articles.
+    
+    For placing areas side-by-side, the syntax is simple, for example:
+      grid-template-areas:    "a1 b1"
+                              "a2 b2";
+    */
+    grid-template-areas: "sec1 sec2 sec3"
+                         "aside1 aside2 .";
+    height: 100%; 
+  }
+  footer {
+    background-color: darkslategray;
+    grid-area: f;
+    display: grid;
+    /* TODO: modify the line below to add the needed grid-template-areas for the navigation elements*/
+    grid-template-areas: "nav1 nav2";
+    padding: 1.5rem;
+  }
+}
 section {
   border: solid;
   /* box-sizing: border-box; */
@@ -64,15 +120,6 @@ aside {
   /* box-sizing: border-box; */
   background-color: cornflowerblue;
   margin: 0;
-}
-
-footer {
-  background-color: darkslategray;
-  grid-area: f;
-  display: grid;
-  /* TODO: modify the line below to add the needed grid-template-areas for the navigation elements*/
-  grid-template-areas: "nav1 nav2";
-  padding: 1.5rem;
 }
 
 
