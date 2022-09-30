@@ -10,7 +10,6 @@ function CountNestedElements(){
                 continue;
             }
             var count = current.querySelector('ul').getElementsByTagName('li').length;
-            var name = current.innerHTML;
-            current.innerHTML = name + " (" + count + ")";
+            var name = current.firstChild.data += " (" + count + ")";
         }
     }
