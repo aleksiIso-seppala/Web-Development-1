@@ -1,6 +1,6 @@
 
 
-function CountNestedElements(){
+window.onload = function CountNestedElements(){
     var TopElement = document.querySelector('ul');
         var listOfElements = TopElement.getElementsByTagName('li');
         
