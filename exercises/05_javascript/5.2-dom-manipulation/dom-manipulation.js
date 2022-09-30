@@ -6,6 +6,27 @@
  */
 function sortTableByColumn(col, table) {
   // TODO: Implement this function as instructed
+  var switching = true;
+
+  while (switching){
+    switching = false;
+    var rows = table.rows;
+
+    for(var i = 1; i<(rows.length-1);i++){
+      var shouldSwitch = false;
+      var x = rows[i].cells[col];
+      var y = rows[i+1].cells[col];
+
+      if(x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()){
+        shouldSwitch = true;
+        break;
+      }
+    }
+    if(shouldSwitch){
+      rows[i].parentNode.insertBefore(rows[i+1], rows[i]);
+      switching = true;
+    }
+  }
 }
 
 /**
