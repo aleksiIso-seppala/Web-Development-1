@@ -14,7 +14,8 @@ document.addEventListener('rollDice', (e) => {
 
     var text = "template"+current;
     console.log(text);
-    button.querySelector("span").innerHTML = document.getElementById(text).innerHTML;
+    button.innerHTML = "";
+    button.innerHTML = document.getElementById(text).innerHTML;
 
     
     if(current == 1){
