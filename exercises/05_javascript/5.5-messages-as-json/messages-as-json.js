@@ -20,6 +20,7 @@ document.addEventListener('userDataReady', function(evt){
 
         const homepageA = clone.querySelector(".homepage").querySelector("a");
         homepageA.textContent = user["homepage"];
+        homepageA.href = user["homepage"];
 
         const phoneNumber = clone.querySelector(".phone").querySelector("span");
         phoneNumber.textContent = user["phoneNumber"];
