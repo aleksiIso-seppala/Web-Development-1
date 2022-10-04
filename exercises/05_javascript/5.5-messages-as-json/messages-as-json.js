@@ -4,7 +4,7 @@ const template = document.getElementById("user-card-template");
 
 
 document.addEventListener('userDataReady', function(evt){
-    console.log(evt.detail.jsonText);
+    // console.log(evt.detail.jsonText);
     const obj = JSON.parse(evt.detail.jsonText);
 
 
@@ -22,16 +22,15 @@ document.addEventListener('userDataReady', function(evt){
         // homepage.href = user["homepage"];
 
         const phoneNumber = clone.querySelector("phone");
-        phoneNumber.textContent = user["phone"];
+        // phoneNumber.textContent = user["phone"];
 
         const avatar = clone.querySelector("avatar");
-        avatar.src = user["avatar"];
+        // avatar.src = user["avatar"];
 
         const address = clone.querySelector(".address").querySelector("p");
         address.textContent = user["address"]["streetAddress"];
-        address.nextElementSibling.textContent = 
-        user["address"]["zipCode"] + " " + user["address"]["city"];
-        address.nextElementSibling.textContent = ["address"]["country"];
+        address.nextElementSibling.textContent = user["address"]["zipCode"] + " " + user["address"]["city"];
+        address.nextElementSibling.textContent = user["address"]["country"];
 
         contacts.append(clone);
     });
