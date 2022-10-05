@@ -4,7 +4,7 @@ const template = document.getElementById("user-card-template");
 
 
 document.addEventListener('userDataReady', function(evt){
-    console.log(evt.detail.jsonText);
+    // console.log(evt.detail.jsonText);
     const obj = JSON.parse(evt.detail.jsonText);
 
 
@@ -18,20 +18,21 @@ document.addEventListener('userDataReady', function(evt){
         const email = clone.querySelector(".title.email");
         email.textContent = user["email"];
 
-        const homepage = clone.querySelector("homepage");
-        // homepage.href = user["homepage"];
+        const homepageA = clone.querySelector(".homepage").querySelector("a");
+        homepageA.textContent = user["homepage"];
+        homepageA.href = user["homepage"];
 
-        const phoneNumber = clone.querySelector("phone");
-        phoneNumber.textContent = user["phone"];
+        const phoneNumber = clone.querySelector(".phone").querySelector("span");
+        phoneNumber.textContent = user["phoneNumber"];
 
-        const avatar = clone.querySelector("avatar");
+        const avatar = clone.querySelector("img");
         avatar.src = user["avatar"];
+        avatar.alt = user["firstName"] + " " + user["lastName"];
 
         const address = clone.querySelector(".address").querySelector("p");
         address.textContent = user["address"]["streetAddress"];
-        address.nextElementSibling.textContent = 
-        user["address"]["zipCode"] + " " + user["address"]["city"];
-        address.nextElementSibling.textContent = ["address"]["country"];
+        address.nextElementSibling.textContent = user["address"]["zipCode"] + " " + user["address"]["city"];
+        address.nextElementSibling.nextElementSibling.textContent = user["address"]["country"];
 
         contacts.append(clone);
     });
